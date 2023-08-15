@@ -21,18 +21,20 @@ To set up and run the DPDK-Based Network Scanner, follow these steps:
    git clone https://github.com/your-username/dpdk-network-scanner.git
    cd dpdk-network-scanner
 
-Install the required dependencies (DPDK, Mellanox drivers, etc.) as described in the INSTALLATION.md file.
+## Install the required dependencies (DPDK, Mellanox drivers, etc.) as described in the INSTALLATION.md file.
 
-Build the scanner application:
+2. Build the scanner application:
+   ```bash
+   make
 
-make
+## Configure the Smart NIC and DPDK settings in the config.ini file.
 
-Configure the Smart NIC and DPDK settings in the config.ini file.
+3. Run the scanner application:
 
-Run the scanner application:
-
-sudo ./dpdk-scanner
-##Code Snippets
+   ```bash
+   sudo ./dpdk-scanner
+   
+## Code Snippets
 Here are some code snippets showcasing the key components of the DPDK-Based Network Scanner:
 
 <details>
@@ -61,11 +63,13 @@ void configure_smart_nic(uint16_t port_id) {
     // ...
 }
 </details>
-##Experiment Reproducibility
+
+## Experiment Reproducibility
 For a detailed understanding of the implementation and to reproduce the experiment, refer to the full source code in this repository.
 
-##Contributions
+## Contributions
 Contributions to this project are welcome! Feel free to submit pull requests for bug fixes, enhancements, or new features.
 
-##License
+## License
+
 This project is licensed under the MIT License.
